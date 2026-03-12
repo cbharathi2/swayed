@@ -24,3 +24,72 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(120deg, rgba(245, 158, 11, 0.35), rgba(15, 23, 42, 0.7), rgba(217, 119, 6, 0.4));
+  background-size: 200% 200%;
+  animation: gradientShift 16s ease infinite;
+}
+
+@keyframes beanFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(18deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(26deg);
+  }
+}
+
+.coffee-bean {
+  position: absolute;
+  width: 16px;
+  height: 22px;
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.9), rgba(69, 26, 3, 0.9));
+  border-radius: 999px;
+  box-shadow: 0 8px 14px rgba(15, 23, 42, 0.35);
+  animation: beanFloat 6s ease-in-out infinite;
+}
+
+.coffee-bean__seam {
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  bottom: 3px;
+  width: 2px;
+  background: rgba(255, 214, 170, 0.5);
+  border-radius: 999px;
+  transform: translateX(-50%);
+}
+
+.bean-delay-1 {
+  animation-delay: 0s;
+}
+
+.bean-delay-2 {
+  animation-delay: 1.4s;
+}
+
+.bean-delay-3 {
+  animation-delay: 2.2s;
+}
+
+.bean-delay-4 {
+  animation-delay: 3.1s;
+}
+
+.bean-delay-5 {
+  animation-delay: 4s;
+}
