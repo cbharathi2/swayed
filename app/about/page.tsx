@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BackgroundVideo from "../components/BackgroundVideo";
-import Navbar from "../components/Navbar";
 
 const highlights = [
   {
@@ -24,7 +23,6 @@ export default function AboutPage() {
   return (
     <div className="relative font-sans text-stone-900 selection:bg-amber-700 selection:text-white">
       <BackgroundVideo />
-      <Navbar />
 
       <section className="relative pt-36 pb-20 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
@@ -101,9 +99,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer className="bg-black/80 backdrop-blur-md py-8 text-center text-stone-500 border-t border-white/10">
-        <p>Copyright (c) 2026 swayedovercoffee - All Rights Reserved.</p>
-      </footer>
+
     </div>
   );
 }

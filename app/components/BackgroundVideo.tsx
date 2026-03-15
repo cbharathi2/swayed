@@ -27,6 +27,7 @@ export default function BackgroundVideo({
   const bgShift = useTransform(scrollY, parallaxRange, [0, parallaxOffset]);
   const bgShiftSpring = useSpring(bgShift, { stiffness: 60, damping: 20, mass: 0.6 });
   const bgY = prefersReducedMotion || !parallax ? 0 : bgShiftSpring;
+  const parallaxOverscan = prefersReducedMotion || !parallax ? 0 : Math.max(Math.abs(parallaxOffset), 120);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -68,12 +69,16 @@ export default function BackgroundVideo({
 
   const mergedStyle: MotionStyle = {
     y: bgY,
+    top: parallaxOverscan ? `${-parallaxOverscan / 2}px` : 0,
+    bottom: parallaxOverscan ? `${-parallaxOverscan / 2}px` : 0,
+    left: 0,
+    right: 0,
     ...(style ?? {}),
   };
 
   return (
     <motion.div
-      className={`fixed inset-0 z-[-1] w-full h-full overflow-hidden bg-black transform-gpu will-change-transform ${className}`}
+      className={`fixed z-[-1] w-full overflow-hidden bg-black transform-gpu will-change-transform ${className}`}
       style={mergedStyle}
     >
       <video

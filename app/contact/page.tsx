@@ -3,13 +3,11 @@
 import { motion } from "framer-motion";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import BackgroundVideo from "../components/BackgroundVideo";
-import Navbar from "../components/Navbar";
 
 export default function ContactPage() {
   return (
     <div className="relative font-sans text-stone-900 selection:bg-amber-700 selection:text-white">
       <BackgroundVideo />
-      <Navbar />
 
       <section className="relative pt-36 pb-24 px-6 max-w-6xl mx-auto">
         <motion.div
@@ -45,7 +43,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h2 className="font-bold text-white">Call or WhatsApp</h2>
-                  <p className="text-stone-400">9003019030</p>
+                  <p className="text-stone-400">9884630841</p>
                 </div>
               </div>
 

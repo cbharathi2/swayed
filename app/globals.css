@@ -43,24 +43,21 @@ body {
   animation: gradientShift 16s ease infinite;
 }
 
-@keyframes beanFloat {
-  0%,
-  100% {
-    transform: translateY(0) rotate(18deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(26deg);
-  }
-}
-
 .coffee-bean {
   position: absolute;
-  width: 16px;
-  height: 22px;
-  background: linear-gradient(135deg, rgba(120, 53, 15, 0.9), rgba(69, 26, 3, 0.9));
-  border-radius: 999px;
-  box-shadow: 0 8px 14px rgba(15, 23, 42, 0.35);
-  animation: beanFloat 6s ease-in-out infinite;
+  width: 18px;
+  height: 25px;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(248, 207, 156, 0.2) 0%, rgba(248, 207, 156, 0.08) 26%, transparent 54%),
+    linear-gradient(145deg, rgba(134, 70, 32, 0.96), rgba(74, 33, 14, 0.98) 62%, rgba(54, 22, 7, 0.98));
+  border-radius: 54% 46% 51% 49% / 46% 58% 42% 54%;
+  border: 1px solid rgba(255, 221, 181, 0.22);
+  box-shadow:
+    inset -2px -2px 5px rgba(38, 16, 6, 0.55),
+    inset 1px 1px 2px rgba(255, 219, 170, 0.18),
+    0 8px 14px rgba(15, 23, 42, 0.35);
+  transform-origin: center;
+  will-change: transform;
 }
 
 .coffee-bean__seam {
@@ -68,28 +65,45 @@ body {
   left: 50%;
   top: 3px;
   bottom: 3px;
-  width: 2px;
-  background: rgba(255, 214, 170, 0.5);
+  width: 3px;
+  background: linear-gradient(180deg, rgba(255, 223, 178, 0.68), rgba(255, 205, 140, 0.35));
   border-radius: 999px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(8deg);
+  box-shadow: 0 0 4px rgba(255, 208, 148, 0.28);
 }
 
-.bean-delay-1 {
-  animation-delay: 0s;
+.coffee-bean::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 38%;
+  height: 22%;
+  border-radius: 999px;
+  background: rgba(255, 238, 214, 0.18);
+  transform: rotate(-18deg);
 }
 
-.bean-delay-2 {
-  animation-delay: 1.4s;
+.bean-small {
+  width: 14px;
+  height: 20px;
 }
 
-.bean-delay-3 {
-  animation-delay: 2.2s;
+.bean-medium {
+  width: 18px;
+  height: 25px;
 }
 
-.bean-delay-4 {
-  animation-delay: 3.1s;
+.bean-large {
+  width: 22px;
+  height: 30px;
 }
 
-.bean-delay-5 {
-  animation-delay: 4s;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
