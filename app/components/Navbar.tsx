@@ -110,12 +110,16 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col"
+            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-2xl flex flex-col"
           >
             {/* Top bar */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-              <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
-                <div className="relative w-10 h-10 overflow-hidden rounded-full ring-2 ring-amber-500/70 shadow-lg shadow-black/30">
+              <Link
+                href="/"
+                onClick={() => setMobileOpen(false)}
+                className="flex min-w-0 flex-1 items-center gap-3 pr-4"
+              >
+                <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-amber-500/70 shadow-lg shadow-black/30">
                   <Image
                     src="/logo.jpeg"
                     alt="Swayed Over Coffee logo"
@@ -124,13 +128,13 @@ export default function Navbar() {
                     className="object-cover"
                   />
                 </div>
-                <span className="text-xl font-bold font-[family-name:var(--font-playfair)] text-white">
+                <span className="truncate text-base font-bold leading-tight tracking-[0.08em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-lg font-[family-name:var(--font-playfair)]">
                   Swayed Over Coffee
                 </span>
               </Link>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white"
+                className="h-10 w-10 shrink-0 flex items-center justify-center rounded-full bg-white/10 text-white"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
