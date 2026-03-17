@@ -38,7 +38,7 @@ const socialLinks = [
   {
     Icon: MessageCircle,
     label: "WhatsApp",
-    href: "https://wa.me/9003019030",
+    href: "https://wa.me/9884630841",
     color: "hover:bg-green-600",
   },
 ];

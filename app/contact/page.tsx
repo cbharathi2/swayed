@@ -106,9 +106,9 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      <footer className="bg-black/80 backdrop-blur-md py-8 text-center text-stone-500 border-t border-white/10">
+      {/* <footer className="bg-black/80 backdrop-blur-md py-8 text-center text-stone-500 border-t border-white/10">
         <p>Copyright (c) 2026 swayedovercoffee - All Rights Reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

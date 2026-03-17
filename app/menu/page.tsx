@@ -15,7 +15,7 @@ const menuCategories: MenuCategory[] = [
     description: "Indulge in a variety of milk chai delights, pure bliss in every sip.",
     image: "/chai.png",
     items: [
-      { name: "Classic Dum Chai", price: 20, desc: "Premium tea leaves and silky milk — unparalleled satisfaction in every sip." },
+      { name: "Classic Dum Chai", price: null, desc: "Premium tea leaves and silky milk — unparalleled satisfaction in every sip." },
       { name: "Ginger Tea", price: null, desc: "Robust Indian spices and creamy milk delivering pure bliss in every warm cup." },
       { name: "Spice Masala Chai", price: null, desc: "A symphony of rich spices and robust tea creating an invigorating sensation." },
       { name: "Elaichi Chai", price: null, desc: "Fragrant cardamom and robust milk chai enchanting your senses with every sip." },
@@ -171,9 +171,9 @@ export default function MenuPage() {
         </section>
       </div>
 
-      <footer className="bg-black/80 backdrop-blur-md py-8 text-center text-stone-500 border-t border-white/10">
+      {/* <footer className="bg-black/80 backdrop-blur-md py-8 text-center text-stone-500 border-t border-white/10">
         <p>Copyright (c) 2026 swayedovercoffee - All Rights Reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
